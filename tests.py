@@ -43,14 +43,14 @@ class Test_Assignment_01(unittest.TestCase):
         """
         A test that will fail.
         """
-        self.assertFalse(True, 'This should fail, please fix it.')
+        self.assertFalse(False)
 
     def test_assert_equality(self):
         """
         A test for equality by assigning a value to a variable
         and evaluating an expression.
         """
-        expected_value = _
+        expected_value = 2
         truth_value = 1 + 1
         self.assertEqual(expected_value, truth_value)
 
@@ -58,7 +58,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         A test to know what the types of the previous fixes were
         """
-        self.assertFalse(True, bool)
+        self.assertTrue(True, bool)
 
     def test_assert_string(self):
         """
@@ -66,13 +66,13 @@ class Test_Assignment_01(unittest.TestCase):
         """
         my_string = 'Hello World'
         my_string_length = len(my_string)  # The expression
-        self.assertEqual(10, my_string_length)
+        self.assertEqual(11, my_string_length)
 
     def test_big_integers(self):
         """
         A test to explore notation of big integers.
         """
-        x = 42,000
+        x = 42000
         self.assertTrue(isinstance(x, int))
 
     def test_bigger_integers(self):
@@ -80,12 +80,12 @@ class Test_Assignment_01(unittest.TestCase):
         A test for bigger, or smaller integers
         """
         big = 1e6
-        self.assertEqual(big, 100)
+        self.assertEqual(big, 1000000.0)
         self.assertTrue(type(big), int)
 
         small = 1e-5
-        self.assertEqual(small, 0.0001)
-        self.assertTrue(type(small), int)
+        self.assertEqual(small, 0.00001)
+        self.assertFalse(type(small), int)
 
     def test_type_conversion(self):
         """
@@ -97,7 +97,7 @@ class Test_Assignment_01(unittest.TestCase):
         i = float(i)
         self.assertTrue(isinstance(i, float))
         i = str(i)
-        self.assertFalse(type(i) == str)
+        self.assertTrue(type(i) == str)
 
     def test_type_conversion2(self):
         """
@@ -112,7 +112,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         A test to show how rounding can get you
         """
-        j = 3.9999
+        j = 4
         self.assertTrue(int(j), float)
         self.assertEqual(int(j), 4)
 
