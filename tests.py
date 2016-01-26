@@ -50,7 +50,7 @@ class Test_Assignment_01(unittest.TestCase):
         A test for equality by assigning a value to a variable
         and evaluating an expression.
         """
-        expected_value = _
+        expected_value = 2
         truth_value = 1 + 1
         self.assertEqual(expected_value, truth_value)
 
@@ -58,7 +58,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         A test to know what the types of the previous fixes were
         """
-        self.assertFalse(True, bool)
+        self.assertFalse(False bool)
 
     def test_assert_string(self):
         """
@@ -66,13 +66,13 @@ class Test_Assignment_01(unittest.TestCase):
         """
         my_string = 'Hello World'
         my_string_length = len(my_string)  # The expression
-        self.assertEqual(10, my_string_length)
+        self.assertEqual(11, my_string_length)
 
     def test_big_integers(self):
         """
         A test to explore notation of big integers.
         """
-        x = 42,000
+        x = 42000
         self.assertTrue(isinstance(x, int))
 
     def test_bigger_integers(self):
@@ -80,7 +80,7 @@ class Test_Assignment_01(unittest.TestCase):
         A test for bigger, or smaller integers
         """
         big = 1e6
-        self.assertEqual(big, 100)
+        self.assertEqual(big, 1000000.0)
         self.assertTrue(type(big), int)
 
         small = 1e-5
