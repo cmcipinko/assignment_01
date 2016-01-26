@@ -58,7 +58,7 @@ class Test_Assignment_01(unittest.TestCase):
         """
         A test to know what the types of the previous fixes were
         """
-        self.assertFalse(True, bool)
+        self.assertTrue(True, bool)
 
     def test_assert_string(self):
         """
